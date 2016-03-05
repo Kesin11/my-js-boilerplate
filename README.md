@@ -9,3 +9,6 @@ CircleCI
 # Extensibility
 React(babel, ESLint)
 heroku(with CircleCI deploy process)
+
+# TODO
+- [ ] browser-sync
