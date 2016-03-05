@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 4.2.2
+
+test:
+  override:
+    - npm test
+
+# deployment:
+#   production:
+#     branch: master
+#     commands:
+#       - heroku maintenance:on --app $APP_NAME
+#       - git push -f git@heroku.com:$APP_NAME.git $CIRCLE_SHA1:refs/heads/master
+#       - heroku run 'rake db:migrate;' --app $APP_NAME
+#       - heroku maintenance:off --app $APP_NAME
