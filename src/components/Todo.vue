@@ -5,19 +5,22 @@
         {{ item.text }}
       </li>
     </ul>
+    <button @click="add">add</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'todo',
-  data () {
-    return {
-      items: [
-        { text: 'foo' },
-        { text: 'bar' }
-      ]
+  computed: {
+    items() {
+      return this.$store.state.items
     }
-  }
+  },
+  methods: {
+    add() {
+      this.$store.commit('add')
+    }
+  },
 }
 </script>
