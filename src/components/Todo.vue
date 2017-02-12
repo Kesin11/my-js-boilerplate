@@ -12,6 +12,8 @@
 </template>
 
 <script>
+// async, await feature need babel-polyfill module
+import 'babel-polyfill'
 import { mapState } from 'vuex'
 import { ADD_TODO, ASYNC_ADD_TODO } from '../store/mutation-types'
 
@@ -28,11 +30,12 @@ export default {
         count: count
       })
     },
-    async_add(count) {
-      this.$store.dispatch({
+    async async_add(count) {
+      await this.$store.dispatch({
         type: ASYNC_ADD_TODO,
         count: count
-      }).then(() => console.log('dispatch then'))
+      })
+      console.log('dispatch await')
     }
   },
 }
