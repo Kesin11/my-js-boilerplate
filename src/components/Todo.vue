@@ -35,7 +35,7 @@ export default {
         type: ASYNC_ADD_TODO,
         count: count
       })
-      console.log('dispatch await')
+      console.debug('dispatch await')
     }
   },
 }
