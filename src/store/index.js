@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { ADD_TODO } from './mutation-types'
 
 Vue.use(Vuex)
 
@@ -11,8 +12,10 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    add(state) {
-      state.items.push({ text: 'pushed' })
+    // ES2015 computed property name feature. constant as the function name
+    [ADD_TODO] (state, payload) {
+      const num = payload.num
+      state.items.push({ text: `pushed ${num}` })
     }
   }
 })

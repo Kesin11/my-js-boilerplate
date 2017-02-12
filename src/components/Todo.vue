@@ -11,6 +11,9 @@
 
 <script>
 import { mapState } from 'vuex'
+import { ADD_TODO } from '../store/mutation-types'
+let num = 0
+
 export default {
   name: 'todo',
   computed: mapState({
@@ -18,7 +21,11 @@ export default {
   }),
   methods: {
     add() {
-      this.$store.commit('add')
+      num += 1
+      this.$store.commit({
+        type: ADD_TODO,
+        num: num
+      })
     }
   },
 }
