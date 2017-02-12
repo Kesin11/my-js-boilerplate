@@ -10,13 +10,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'todo',
-  computed: {
-    items() {
-      return this.$store.state.items
-    }
-  },
+  computed: mapState({
+    items: state => state.items
+  }),
   methods: {
     add() {
       this.$store.commit('add')
