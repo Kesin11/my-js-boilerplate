@@ -17,5 +17,17 @@ export default new Vuex.Store({
       const num = payload.num
       state.items.push({ text: `pushed ${num}` })
     }
+  },
+  // mutations must be synchronous
+  // so async feature should be written in actions
+  actions: {
+    add (context, payload) {
+      context.commit(ADD_TODO, payload)
+    },
+    async_add (context, payload) {
+      setTimeout(() => {
+        context.commit(ADD_TODO, payload)
+      }, 1000)
+    }
   }
 })
