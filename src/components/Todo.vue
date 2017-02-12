@@ -32,7 +32,7 @@ export default {
       this.$store.dispatch({
         type: ASYNC_ADD_TODO,
         count: count
-      })
+      }).then(() => console.log('dispatch then'))
     }
   },
 }
