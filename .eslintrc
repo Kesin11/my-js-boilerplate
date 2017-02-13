@@ -2,7 +2,8 @@
 // es2015 + それなりに新しい文法を強制するような感じ
 {
     "extends": [
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:ava/recommended"
     ],
     "env": {
         "browser": true,
@@ -10,7 +11,8 @@
         "es6": true,
     },
     "plugins": [
-        "vue"
+        "vue",
+        "ava"
     ],
     "parserOptions": {
       "ecmaVersion": 2017,
