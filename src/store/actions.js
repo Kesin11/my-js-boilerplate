@@ -1,4 +1,4 @@
-import { ADD_TODO } from '././mutation-types'
+import { ADD_TODO } from './mutation-types'
 
 export const add = (context, payload) => {
   context.commit(ADD_TODO, payload)
