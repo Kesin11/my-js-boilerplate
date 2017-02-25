@@ -6,12 +6,12 @@
     "js/Foo.js"
   ],
   "names": [],
-  "mappings": "AAAA;;;;;;;;;;;ICAqB;AACnB,WADmB,IACnB,CAAY,IAAZ,EAAkB,OAAlB,EAA2B;0BADR,MACQ;;AACzB,SAAK,IAAL,GAAY,IAAZ,CADyB;AAEzB,SAAK,OAAL,GAAe,OAAf,CAFyB;GAA3B;;eADmB;;+BAKP;AACV,aAAO,KAAK,IAAL,CADG;;;;gCAGC,QAAQ;AACnB,aAAO,KAAK,IAAL,GAAY,MAAZ,CADY;;;;SARF;;;;;;;;;;;;;;;;;;;;;;;;;;ICEA;;;AACnB,WADmB,GACnB,CAAY,IAAZ,EAAkB;0BADC,KACD;;kEADC,gBAEX,OADU;GAAlB;;eADmB;;+BAIP;AACV,aAAO,KAAK,IAAL,CADG;;;;gCAGC,QAAQ;AACnB,uBAAe,KAAK,IAAL,GAAY,MAA3B,CADmB;;;;SAPF",
+  "mappings": "AAAA;;;;;;;;;;;ICAqB;AACnB,WADmB,IACnB,CAAY,IAAZ,EAAkB,OAAlB,EAA2B;0BADR,MACQ;;AACzB,SAAK,IAAL,GAAY,IAAZ,CADyB;AAEzB,SAAK,OAAL,GAAe,OAAf,CAFyB;GAA3B;;eADmB;;+BAKP;AACV,aAAO,KAAK,IAAL,CADG;;;;gCAGC,QAAQ;AACnB,aAAO,KAAK,IAAL,GAAY,MAAZ,CADY;;;;SARF;;;;;;;;;;;;;;;;;;;;;;;;;;ICEA;;;AACnB,WADmB,GACnB,CAAY,IAAZ,EAAkB,OAAlB,EAA2B;0BADR,KACQ;;uEADR,gBAEX,MAAM,UADa;;AAEzB,UAAK,IAAL,GAAY,IAAZ,CAFyB;;GAA3B;;eADmB;;+BAKP;AACV,aAAO,KAAK,IAAL,CADG;;;;gCAGC,QAAQ;AACnB,uBAAe,KAAK,IAAL,GAAY,MAA3B,CADmB;;;;SARF",
   "file": "generated.js",
   "sourceRoot": "",
   "sourcesContent": [
     "(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})",
     "export default class Base {\n  constructor(name, version) {\n    this.name = name\n    this.version = version\n  }\n  get_name () {\n    return this.name\n  }\n  concat_name (string) {\n    return this.name + string\n  }\n}\n",
-    "import Base from './Base'\n\nexport default class Foo extends Base {\n  constructor(name) {\n    super(name)\n  }\n  get_name () {\n    return this.name\n  }\n  concat_name (string) {\n    return `Foo: ${this.name}${string}`\n  }\n}\n"
+    "import Base from './Base'\n\nexport default class Foo extends Base {\n  constructor(name, version) {\n    super(name, version)\n    this.name = name\n  }\n  get_name () {\n    return this.name\n  }\n  concat_name (string) {\n    return `Foo: ${this.name}${string}`\n  }\n}\n"
   ]
 }

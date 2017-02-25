@@ -1,27 +1,30 @@
 // 参考: http://qiita.com/mysticatea/items/f523dab04a25f617c87d
 // es2015 + それなりに新しい文法を強制するような感じ
 {
-    "extends": "eslint:recommended",
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:ava/recommended"
+    ],
     "env": {
         "browser": true,
         "node": true,
         "es6": true,
-        "mocha": true
     },
     "plugins": [
-        "react"
+        "vue",
+        "ava"
     ],
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 2017,
       "sourceType": "module",
       "ecmaFeatures": {
-        "jsx": true,
         "modules": true
       }
     },
     "rules": {
         "semi": [2, 'never'],
-        "arrow-parens": 2,
+        "arrow-parens": [2, 'as-needed'],
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": 2,
@@ -31,6 +34,7 @@
         "no-empty-pattern": 2,
         "no-this-before-super": 2,
         "no-var": 2,
+        "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
         "object-shorthand": 2,
         "prefer-arrow-callback": 2,
         "prefer-const": 2,
