@@ -1,6 +1,7 @@
 // 参考: http://qiita.com/mysticatea/items/f523dab04a25f617c87d
 // es2015 + それなりに新しい文法を強制するような感じ
 {
+    "root": true,
     "extends": [
         "eslint:recommended",
         "plugin:ava/recommended"
