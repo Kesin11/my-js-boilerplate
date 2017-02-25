@@ -4,7 +4,7 @@ machine:
 
 test:
   override:
-    - npm lint
+    - npm run lint
     - npm test
 
 # deployment:
