@@ -1,6 +1,6 @@
 import test from 'ava'
-import store from '../../src/store'
-import { ADD_TODO, ASYNC_ADD_TODO } from '../../src/store/mutation-types'
+import store from '../src/store'
+import { ADD_TODO, ASYNC_ADD_TODO } from '../src/store/mutation-types'
 
 test.beforeEach(t => {
   const state = {
