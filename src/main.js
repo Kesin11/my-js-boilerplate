@@ -5,12 +5,12 @@ import store from './store'
 
 new Vue({
   el: '#app',
-  render: (h) => h(App)
+  render: h => h(App)
 })
 
 new Vue({
   el: '#todo',
   store,
   components: { Todo },
-  render : (h) => h(Todo)
+  render : h => h(Todo)
 })

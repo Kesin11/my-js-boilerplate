@@ -6,7 +6,7 @@ export const add = (context, payload) => {
 // mutations must be synchronous
 // so async feature should be written in actions
 export const async_add = (context, payload) => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       context.commit(ADD_TODO, payload)
       resolve()

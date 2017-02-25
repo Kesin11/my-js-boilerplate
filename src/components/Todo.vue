@@ -27,13 +27,13 @@ export default {
     add(count) {
       this.$store.dispatch({
         type: ADD_TODO,
-        count: count
+        count
       })
     },
     async async_add(count) {
       await this.$store.dispatch({
         type: ASYNC_ADD_TODO,
-        count: count
+        count
       })
       console.debug('dispatch await')
     }
