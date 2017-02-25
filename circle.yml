@@ -1,9 +1,10 @@
 machine:
   node:
-    version: 4.2.2
+    version: 7
 
 test:
   override:
+    - npm lint
     - npm test
 
 # deployment:
