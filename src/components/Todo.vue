@@ -2,12 +2,12 @@
   <div id="todo">
     <div>count: {{ count }}</div><br>
     <ul>
-      <li v-for="item in items">
+      <li v-for="item in items" :key="item.id">
         {{ item.text }}
       </li>
     </ul>
     <button @click="add(count)">add</button>
-    <button @click="async_add(count)">async_add</button>
+    <button @click="asyncAdd(count)">asyncAdd</button>
   </div>
 </template>
 
@@ -18,25 +18,25 @@ import { mapState } from 'vuex'
 import { ADD_TODO, ASYNC_ADD_TODO } from '../store/mutation-types'
 
 export default {
-  name: 'todo',
+  name: 'Todo',
   computed: mapState({
     items: state => state.items,
-    count: state => state.count
+    count: state => state.count,
   }),
   methods: {
-    add(count) {
+    add (count) {
       this.$store.dispatch({
         type: ADD_TODO,
-        count
+        count,
       })
     },
-    async async_add(count) {
+    async asyncAdd (count) {
       await this.$store.dispatch({
         type: ASYNC_ADD_TODO,
-        count
+        count,
       })
       console.debug('dispatch await')
-    }
+    },
   },
 }
 </script>

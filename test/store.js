@@ -5,7 +5,7 @@ import { ADD_TODO, ASYNC_ADD_TODO } from '../src/store/mutation-types'
 test.beforeEach(t => {
   const state = {
     items: [ ],
-    count: 0
+    count: 0,
   }
   store.replaceState(state)
   t.context.store = store

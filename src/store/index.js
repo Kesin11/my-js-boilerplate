@@ -9,10 +9,10 @@ export default new Vuex.Store({
   actions,
   state: {
     items: [
-      { text: 'state' },
-      { text: 'action' }
+      { id: 1, text: 'state' },
+      { id: 2, text: 'action' },
     ],
-    count: 0
+    count: 0,
   },
   mutations: {
     // ES2015 computed property name feature. constant as the function name
@@ -20,6 +20,6 @@ export default new Vuex.Store({
       const count = payload.count + 1
       state.count = count
       state.items.push({ text: `pushed ${count}` })
-    }
-  }
+    },
+  },
 })

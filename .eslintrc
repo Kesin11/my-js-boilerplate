@@ -21,5 +21,9 @@
       }
     },
     "rules": {
+      "comma-dangle": ["error", "always-multiline"],
+      "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
+
+      "vue/max-attributes-per-line": [0]
     }
 }
