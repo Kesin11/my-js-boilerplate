@@ -1,10 +1,10 @@
 // 参考: http://qiita.com/mysticatea/items/f523dab04a25f617c87d
 // es2015 + それなりに新しい文法を強制するような感じ
 {
-    "root": true,
     "extends": [
-        "eslint:recommended",
-        "plugin:ava/recommended"
+        "standard",
+        "plugin:ava/recommended",
+        "plugin:vue/recommended"
     ],
     "env": {
         "browser": true,
@@ -12,38 +12,18 @@
         "es6": true,
     },
     "plugins": [
-        "vue",
         "ava"
     ],
     "parserOptions": {
       "ecmaVersion": 2017,
       "sourceType": "module",
       "ecmaFeatures": {
-        "modules": true
       }
     },
     "rules": {
-        "semi": [2, 'never'],
-        "arrow-parens": [2, 'as-needed'],
-        "arrow-spacing": 2,
-        "constructor-super": 2,
-        "generator-star-spacing": 2,
-        "no-class-assign": 2,
-        "no-const-assign": 2,
-        "no-dupe-class-members": 2,
-        "no-empty-pattern": 2,
-        "no-this-before-super": 2,
-        "no-var": 2,
-        "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
-        "object-shorthand": 2,
-        "prefer-arrow-callback": 2,
-        "prefer-const": 2,
-        "prefer-reflect": 2,
-        "prefer-spread": 2,
-        "prefer-template": 2,
-        "require-yield": 2,
+      "comma-dangle": ["error", "always-multiline"],
+      "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
 
-        "no-console": 1,
-        "no-debugger": 1,
+      "vue/max-attributes-per-line": [0]
     }
 }

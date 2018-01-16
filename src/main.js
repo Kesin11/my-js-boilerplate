@@ -3,14 +3,15 @@ import App from './App.vue'
 import Todo from './components/Todo.vue'
 import store from './store'
 
-new Vue({
+// TODO: Check current vue.js style
+new Vue({ // eslint-disable-line no-new
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
 })
 
-new Vue({
+new Vue({ // eslint-disable-line no-new
   el: '#todo',
   store,
   components: { Todo },
-  render : h => h(Todo)
+  render: h => h(Todo),
 })

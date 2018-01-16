@@ -1,6 +1,22 @@
 {
   "presets": [
-    "es2015",
-    'stage-3'
-  ]
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 Chrome versions"]
+      },
+      "modules": false
+    }]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 Chrome versions"]
+          }
+        }]
+        // Remove "modules": false for ava test
+      ]
+    }
+  }
 }

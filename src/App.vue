@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="dist/logo.png">
-    <h1></h1>
+    <h1>my-js-boilerplate</h1>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,12 +21,12 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
-  }
+  },
 }
 </script>
 
