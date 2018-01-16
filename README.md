@@ -1,7 +1,8 @@
 # my-js-boilerplate
+[![CircleCI](https://circleci.com/gh/Kesin11/my-js-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/Kesin11/my-js-boilerplate/tree/master)
 
 - Vue.js + Vuex
-- Babel es2015 + stage-3
+- Babel
 - AVA
 - ESLint
 
@@ -35,4 +36,7 @@ npm run test:watch
 ## Lint
 ```bash
 npm run lint
+
+# --fix
+npm run lint:fix
 ```
