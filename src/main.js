@@ -4,12 +4,12 @@ import Todo from './components/Todo.vue'
 import store from './store'
 
 // TODO: Check current vue.js style
-new Vue({ // eslint-disable-line no-new
+const _app = new Vue({
   el: '#app',
   render: h => h(App),
 })
 
-new Vue({ // eslint-disable-line no-new
+const _todo = new Vue({
   el: '#todo',
   store,
   components: { Todo },
