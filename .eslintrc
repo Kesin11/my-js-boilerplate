@@ -4,7 +4,8 @@
     "extends": [
         "standard",
         "plugin:ava/recommended",
-        "plugin:vue/recommended"
+        "plugin:vue/recommended",
+        "prettier"
     ],
     "env": {
         "browser": true,
@@ -12,7 +13,8 @@
         "es6": true,
     },
     "plugins": [
-        "ava"
+        "ava",
+        "prettier",
     ],
     "parserOptions": {
       "ecmaVersion": 2017,
@@ -21,7 +23,15 @@
       }
     },
     "rules": {
-      "comma-dangle": ["error", "always-multiline"],
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "all"
+        }
+      ],
+      # "comma-dangle": ["error", "always-multiline"],
       "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
 
       "vue/max-attributes-per-line": [0]

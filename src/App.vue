@@ -22,7 +22,7 @@
 <script>
 export default {
   name: 'App',
-  data () {
+  data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     }
@@ -40,7 +40,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 

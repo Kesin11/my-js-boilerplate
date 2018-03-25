@@ -24,13 +24,13 @@ export default {
     count: state => state.count,
   }),
   methods: {
-    add (count) {
+    add(count) {
       this.$store.dispatch({
         type: ADD_TODO,
         count,
       })
     },
-    async asyncAdd (count) {
+    async asyncAdd(count) {
       await this.$store.dispatch({
         type: ASYNC_ADD_TODO,
         count,
