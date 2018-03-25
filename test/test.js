@@ -9,9 +9,9 @@ test('t.context', t => {
 })
 
 test('assertion', t => {
-  const foo = { foo: 2, bar: 1 }
+  const foo = {'foo': 2, 'bar': 1}
   t.is(foo['foo'], 2, 'is')
-  t.deepEqual(foo, { foo: 2, bar: 1 }, 'deepEqual')
+  t.deepEqual(foo, {'foo': 2, 'bar': 1}, 'deepEqual')
 })
 
 test('async/await', async t => {
